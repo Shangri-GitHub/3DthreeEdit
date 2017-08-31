@@ -170,18 +170,20 @@
 			//
 
 			var editor = new Editor();
+            console.log(editor);
 
-			var viewport = new Viewport( editor );
+            var viewport = new Viewport( editor );
 			document.body.appendChild( viewport.dom );
 
-			var script = new Script( editor );
-			document.body.appendChild( script.dom );
 
-			var player = new Player( editor );
-			document.body.appendChild( player.dom );
+//			var script = new Script( editor );
+//			document.body.appendChild( script.dom );
+
+//			var player = new Player( editor );
+//			document.body.appendChild( player.dom );
 
 			var toolbar = new Toolbar( editor );
-			document.body.appendChild( toolbar.dom );
+            document.body.appendChild( toolbar.dom );
 
 			var menubar = new Menubar( editor );
 			document.body.appendChild( menubar.dom );
