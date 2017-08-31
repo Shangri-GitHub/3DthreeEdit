@@ -8,10 +8,29 @@ Menubar.Add = function ( editor ) {
 	container.setClass( 'menu' );
 
 	var title = new UI.Panel();
+	var icon = new UI.Icon();
+    icon.setClass( 'fa fa-meetup' );
 	title.setClass( 'title' );
-	title.setTextContent( 'Add' );
-	container.add( title );
+	title.setTextContent( '前进' );
+	title.onClick( function () {
+        editor.redo();
 
+    } );
+    container.add( icon,title );
+	// container.add( title );
+
+    // Redo
+
+    // var redo = new UI.Row();
+    // redo.setClass( 'option' );
+    // redo.setTextContent( '重做 (Ctrl+Shift+Z)' );
+    // redo.onClick( function () {
+    //
+     //    editor.redo();
+    //
+    // } );
+    // options.add( redo );
+    //
 	var options = new UI.Panel();
 	options.setClass( 'options' );
 	container.add( options );

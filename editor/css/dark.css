@@ -150,7 +150,7 @@ select {
 
 #sidebar {
 	position: absolute;
-	right: 0;
+	left: 0;
 	top: 32px;
 	bottom: 0;
 	width: 300px;
