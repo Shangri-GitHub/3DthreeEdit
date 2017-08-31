@@ -8,9 +8,9 @@ Sidebar.Properties = function ( editor ) {
 
 	var container = new UI.Span();
 
-	var objectTab = new UI.Text( 'OBJECT' ).onClick( onClick );
-	var geometryTab = new UI.Text( 'GEOMETRY' ).onClick( onClick );
-	var materialTab = new UI.Text( 'MATERIAL' ).onClick( onClick );
+	var objectTab = new UI.Text( '对象' ).onClick( onClick );
+	var geometryTab = new UI.Text( '结构' ).onClick( onClick );
+	var materialTab = new UI.Text( '材质' ).onClick( onClick );
 
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
@@ -53,15 +53,15 @@ Sidebar.Properties = function ( editor ) {
 		material.setDisplay( 'none' );
 
 		switch ( section ) {
-			case 'OBJECT':
+			case '对象':
 				objectTab.setClass( 'selected' );
 				object.setDisplay( '' );
 				break;
-			case 'GEOMETRY':
+			case '结构':
 				geometryTab.setClass( 'selected' );
 				geometry.setDisplay( '' );
 				break;
-			case 'MATERIAL':
+			case '材质':
 				materialTab.setClass( 'selected' );
 				material.setDisplay( '' );
 				break;
@@ -69,7 +69,7 @@ Sidebar.Properties = function ( editor ) {
 
 	}
 
-	select( 'OBJECT' );
+	select( '对象' );
 
 	return container;
 

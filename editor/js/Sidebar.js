@@ -9,9 +9,9 @@ var Sidebar = function ( editor ) {
 
 	//
 
-	var sceneTab = new UI.Text( 'SCENE' ).onClick( onClick );
-	var projectTab = new UI.Text( 'PROJECT' ).onClick( onClick );
-	var settingsTab = new UI.Text( 'SETTINGS' ).onClick( onClick );
+	var sceneTab = new UI.Text( '场景' ).onClick( onClick );
+	var projectTab = new UI.Text( '投射' ).onClick( onClick );
+	var settingsTab = new UI.Text( '设置' ).onClick( onClick );
 
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
@@ -20,7 +20,7 @@ var Sidebar = function ( editor ) {
 
 	function onClick( event ) {
 
-		select( event.target.textContent );
+        select( event.target.textContent );
 
 	}
 
@@ -32,7 +32,7 @@ var Sidebar = function ( editor ) {
 		new Sidebar.Animation( editor ),
 		new Sidebar.Script( editor )
 	);
-	container.add( scene );
+    container.add( scene );
 
 	var project = new UI.Span().add(
 		new Sidebar.Project( editor )
@@ -58,15 +58,15 @@ var Sidebar = function ( editor ) {
 		settings.setDisplay( 'none' );
 
 		switch ( section ) {
-			case 'SCENE':
+			case '场景':
 				sceneTab.setClass( 'selected' );
 				scene.setDisplay( '' );
 				break;
-			case 'PROJECT':
+			case '投射':
 				projectTab.setClass( 'selected' );
 				project.setDisplay( '' );
 				break;
-			case 'SETTINGS':
+			case '设置':
 				settingsTab.setClass( 'selected' );
 				settings.setDisplay( '' );
 				break;
@@ -74,7 +74,7 @@ var Sidebar = function ( editor ) {
 
 	}
 
-	select( 'SCENE' );
+	select( '场景' );
 
 	return container;
 

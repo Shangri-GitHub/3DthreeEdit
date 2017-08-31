@@ -106,9 +106,9 @@ Sidebar.Scene = function ( editor ) {
 
 	var backgroundRow = new UI.Row();
 
-	var backgroundColor = new UI.Color().setValue( '#aaaaaa' ).onChange( onBackgroundChanged );
+	var backgroundColor = new UI.Color().setHeight( '24px' ).setValue( '#aaaaaa' ).onChange( onBackgroundChanged );
 
-	backgroundRow.add( new UI.Text( 'Background' ).setWidth( '90px' ) );
+	backgroundRow.add( new UI.Text( '背景颜色' ).setWidth( '90px' ) );
 	backgroundRow.add( backgroundColor );
 
 	container.add( backgroundRow );
@@ -130,9 +130,9 @@ Sidebar.Scene = function ( editor ) {
 	var fogTypeRow = new UI.Row();
 	var fogType = new UI.Select().setOptions( {
 
-		'None': 'None',
-		'Fog': 'Linear',
-		'FogExp2': 'Exponential'
+		'None': '无',
+		'Fog': '轻度雾化',
+		'FogExp2': '重度雾化'
 
 	} ).setWidth( '150px' );
 	fogType.onChange( function () {
@@ -142,7 +142,7 @@ Sidebar.Scene = function ( editor ) {
 
 	} );
 
-	fogTypeRow.add( new UI.Text( 'Fog' ).setWidth( '90px' ) );
+	fogTypeRow.add( new UI.Text( '雾化模式' ).setWidth( '90px' ) );
 	fogTypeRow.add( fogType );
 
 	container.add( fogTypeRow );

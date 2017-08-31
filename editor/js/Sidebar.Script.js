@@ -104,7 +104,7 @@ Sidebar.Script = function ( editor ) {
 
 		if ( object !== null && editor.camera !== object ) {
 
-			container.setDisplay( 'block' );
+			container.setDisplay( 'none' );
 
 			update();
 
