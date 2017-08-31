@@ -14,7 +14,7 @@ var Toolbar = function ( editor ) {
 
 	// translate / rotate / scale
 
-	var translate = new UI.Button( 'translate' );
+	var translate = new UI.Button( '移动' );
 	translate.dom.title = 'W';
 	translate.dom.className = 'Button selected';
 	translate.onClick( function () {
@@ -24,7 +24,7 @@ var Toolbar = function ( editor ) {
 	} );
 	buttons.add( translate );
 
-	var rotate = new UI.Button( 'rotate' );
+	var rotate = new UI.Button( '旋转' );
 	rotate.dom.title = 'E';
 	rotate.onClick( function () {
 
@@ -33,7 +33,7 @@ var Toolbar = function ( editor ) {
 	} );
 	buttons.add( rotate );
 
-	var scale = new UI.Button( 'scale' );
+	var scale = new UI.Button( '缩放' );
 	scale.dom.title = 'R';
 	scale.onClick( function () {
 
