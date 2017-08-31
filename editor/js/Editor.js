@@ -467,8 +467,9 @@ Editor.prototype = {
 	//
 
 	fromJSON: function ( json ) {
-		
-        var loader = new THREE.ObjectLoader();
+        json
+
+		var loader = new THREE.ObjectLoader();
 
 		// backwards
 
