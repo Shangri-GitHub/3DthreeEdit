@@ -13,22 +13,27 @@ Menubar.Play = function ( editor ) {
 
 	var title = new UI.Panel();
 	title.setClass( 'title' );
-	title.setTextContent( 'Play' );
+	title.setTextContent( '清除历史记录' );
 	title.onClick( function () {
+        if ( confirm( 'The Undo/Redo History will be cleared. Are you sure?' ) ) {
 
-		if ( isPlaying === false ) {
+            		editor.history.clear();
 
-			isPlaying = true;
-			title.setTextContent( 'Stop' );
-			signals.startPlayer.dispatch();
+            	}
 
-		} else {
-
-			isPlaying = false;
-			title.setTextContent( 'Play' );
-			signals.stopPlayer.dispatch();
-
-		}
+		// if ( isPlaying === false ) {
+        //
+		// 	isPlaying = true;
+		// 	title.setTextContent( 'Stop' );
+		// 	signals.startPlayer.dispatch();
+        //
+		// } else {
+        //
+		// 	isPlaying = false;
+		// 	title.setTextContent( 'Play' );
+		// 	signals.stopPlayer.dispatch();
+        //
+		// }
 
 	} );
 	container.add( title );

@@ -162,8 +162,23 @@ UI.Span = function () {
 
 };
 
+//i
+
 UI.Span.prototype = Object.create( UI.Element.prototype );
 UI.Span.prototype.constructor = UI.Span;
+
+UI.Icon = function () {
+
+    UI.Element.call( this );
+
+    this.dom = document.createElement( 'i' );
+
+    return this;
+
+};
+
+UI.Icon.prototype = Object.create( UI.Element.prototype );
+UI.Icon.prototype.constructor = UI.Icon;
 
 // Div
 
