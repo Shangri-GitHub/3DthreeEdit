@@ -2,7 +2,7 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
-Menubar.View = function ( editor ) {
+Menubar.Save = function ( editor ) {
 
 	var container = new UI.Panel();
 	container.setClass( 'menu' );
@@ -16,7 +16,9 @@ Menubar.View = function ( editor ) {
         editor.signals.sceneGraphChanged.dispatch();
         console.log(editor.signals.sceneGraphChanged.dispatch)
 	})
-	container.add( title );
+    var icon = new UI.Icon();
+    icon.setClass('fa fa-file-text-o');
+    container.add(icon, title);
 
 	// var options = new UI.Panel();
 	// options.setClass( 'options' );

@@ -2,7 +2,7 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
-Menubar.Add = function ( editor ) {
+Menubar.Example = function ( editor ) {
 
     var container = new UI.Panel();
     container.setClass( 'menu' );
@@ -11,12 +11,14 @@ Menubar.Add = function ( editor ) {
     var icon = new UI.Icon();
     icon.setClass( 'fa fa-meetup' );
     title.setClass( 'title' );
-    title.setTextContent( '前进' );
+    title.setTextContent( 'Example' );
     title.onClick( function () {
         editor.redo();
 
     } );
-    container.add( icon,title );
+    var icon = new UI.Icon();
+    icon.setClass('fa fa-meh-o');
+    container.add(icon, title);
     // container.add( title );
 
     // Redo

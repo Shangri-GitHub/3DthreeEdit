@@ -2,21 +2,20 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
-Menubar.Edit = function ( editor ) {
+Menubar.Undo = function (editor) {
 
     var container = new UI.Panel();
-    container.setClass( 'menu' );
+    container.setClass('menu');
 
     var title = new UI.Panel();
-    title.setClass( 'title' );
-    title.setTextContent( '撤回' );
-    title.onClick( function () {
-        alert(1)
-
+    title.setClass('title');
+    title.setTextContent('后退');
+    title.onClick(function () {
         editor.undo();
-
-    } );
-    container.add( title );
+    });
+    var icon = new UI.Icon();
+    icon.setClass('fa fa-undo');
+    container.add(icon, title);
 
     // var options = new UI.Panel();
     // options.setClass( 'options' );
