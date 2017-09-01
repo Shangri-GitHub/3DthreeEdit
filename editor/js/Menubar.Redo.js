@@ -7,15 +7,30 @@ Menubar.Redo = function (editor) {
     var container = new UI.Panel();
     container.setClass('menu');
 
-    var title = new UI.Panel();
+    var redo = new UI.Panel();
     var icon = new UI.Icon();
     icon.setClass('fa fa-repeat');
-    title.setClass('title');
-    title.setTextContent('前进');
-    title.onClick(function () {
+    redo.setClass('title');
+    redo.setTextContent('前进');
+    redo.onClick(function () {
         editor.redo();
     });
-    container.add(icon, title);
+    container.add(icon, redo);
+
+
+    editor.signals.historyChanged.add( function () {
+
+        var history = editor.history;
+
+        redo.setClass( 'title' );
+
+        if ( history.redos.length == 0 ) {
+
+            redo.setClass( 'title inactive' );
+
+        }
+
+    } );
 
     return container;
 

@@ -8,11 +8,11 @@ Menubar.Status = function ( editor ) {
 	container.setClass( 'menu right' );
 	var autosave = new UI.THREE.Boolean( editor.config.getKey( 'autosave' ), '自动保存' );
 	autosave.text.setColor( '#888' );
-	autosave.onChange( function () {
+    autosave.onChange( function () {
 
 		var value = this.getValue();
 
-		editor.config.setKey( 'autosave', value );
+        editor.config.setKey( 'autosave', value );
 
 		if ( value === true ) {
 
@@ -35,10 +35,10 @@ Menubar.Status = function ( editor ) {
 
 	} );
 
-	var version = new UI.Text( "w" );
+	var version = new UI.Text( "版本" );
 	version.setClass( 'title' );
 
-	version.setOpacity( 0.1 );
+	version.setOpacity( 0 );
 	container.add( version );
 
 	return container;

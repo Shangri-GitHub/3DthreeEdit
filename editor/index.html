@@ -297,10 +297,11 @@
 			}, false );
 
 			document.addEventListener( 'keydown', function ( event ) {
+                switch ( event.keyCode ) {
 
-				switch ( event.keyCode ) {
 
-					case 8: // backspace
+
+                    case 8: // backspace
 
 						event.preventDefault(); // prevent browser back
 
@@ -314,7 +315,13 @@
 						if ( parent !== null ) editor.execute( new RemoveObjectCommand( object ) );
 
 						break;
+					case 83: //save
 
+						if(event.ctrlKey){
+                            editor.signals.sceneGraphChanged.dispatch();
+						}
+
+                        break;
 					case 90: // Register Ctrl-Z for Undo, Ctrl-Shift-Z for Redo
 
 						if ( event.ctrlKey && event.shiftKey ) {

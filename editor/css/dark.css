@@ -102,12 +102,20 @@ select {
 		text-align: right;
 	}
 
-		#menubar .menu .title {
-			display: inline-block;
-			color: #888;
-			margin: 0;
-			padding: 8px;
-		}
+      #menubar .menu .title {
+      	display: inline-block;
+      	color: #666;
+      	margin: 0;
+      	padding: 8px;
+      }
+
+      #menubar .menu .title.inactive{
+      	display: inline-block;
+      	color: #888;
+      	margin: 0;
+      	background-color: transparent;
+      	padding: 8px;
+      }
 
 		#menubar .menu .options {
 			position: absolute;
