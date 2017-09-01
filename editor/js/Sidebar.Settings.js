@@ -14,8 +14,8 @@ Sidebar.Settings = function ( editor ) {
 	// class
 
 	var options = {
-		'css/light.css': 'light',
-		'css/dark.css': 'dark'
+		'css/light.css': '浅色',
+		'css/dark.css': '深色'
 	};
 
 	var themeRow = new UI.Row();
@@ -37,7 +37,7 @@ Sidebar.Settings = function ( editor ) {
 
 	} );
 
-	themeRow.add( new UI.Text( 'Theme' ).setWidth( '90px' ) );
+	themeRow.add( new UI.Text( '主题' ).setWidth( '90px' ) );
 	themeRow.add( theme );
 
 	container.add( themeRow );

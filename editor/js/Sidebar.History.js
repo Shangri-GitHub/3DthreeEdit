@@ -13,7 +13,7 @@ Sidebar.History = function ( editor ) {
 
 	var container = new UI.Panel();
 
-	container.add( new UI.Text( 'HISTORY' ) );
+	container.add( new UI.Text( '历史记录' ) );
 
 	//
 
@@ -40,7 +40,7 @@ Sidebar.History = function ( editor ) {
 		}
 
 	} );
-	container.add( persistent );
+	// container.add( persistent );
 
 	container.add( new UI.Break(), new UI.Break() );
 

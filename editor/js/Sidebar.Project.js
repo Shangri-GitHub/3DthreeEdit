@@ -44,7 +44,7 @@ Sidebar.Project = function ( editor ) {
 
 	} );
 
-	rendererTypeRow.add( new UI.Text( 'Renderer' ).setWidth( '90px' ) );
+	rendererTypeRow.add( new UI.Text( '渲染器' ).setWidth( '90px' ) );
 	rendererTypeRow.add( rendererType );
 
 	container.add( rendererTypeRow );
