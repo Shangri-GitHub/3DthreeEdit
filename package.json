@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Shangri-GitHub/3DthreeEdit/issues"
   },
-  "homepage": "https://github.com/Shangri-GitHub/3DthreeEdit#readme"
+  "homepage": "https://github.com/Shangri-GitHub/3DthreeEdit#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
